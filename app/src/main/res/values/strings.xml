@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">Don\'t Wait !</string>
+    <string name="title_activity_home_screen">HomeScreen</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="please_select_your_roll_here">Please Select Your Role Here</string>
+    <string name="pmt_traveller">PMT Traveller</string>
+    <string name="pmt_officer">PMT Officer</string>
+    <string name="an_app_for_pmt_travellers_and_pmt_officers">An App for PMT Travellers and PMT Officers</string>
+    <string name="login_page">Login Page</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_username">Enter UserName</string>
+    <string name="login">Login</string>
+    <string name="enter_source">Enter Source</string>
+    <string name="enter_destination">Enter Destination</string>
+    <string name="enter_bus_number">Enter Bus Number</string>
+    <string name="enter_leaving_time_of_bus">Enter Leaving Time of Bus</string>
+    <string name="add">Add</string>
 </resources>
