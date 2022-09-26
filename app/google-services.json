@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "835483273687",
+    "project_id": "don-t-wait-app-c029b",
+    "storage_bucket": "don-t-wait-app-c029b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835483273687:android:498da04a9a700e2e48a392",
+        "android_client_info": {
+          "package_name": "com.vj.dontwaitapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "835483273687-b8fdt7nr4s870eusrgkq586n2d5shofi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvnjTeLsuhQKkQmWOtfSc8pk50Kp4ZUcg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "835483273687-b8fdt7nr4s870eusrgkq586n2d5shofi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
