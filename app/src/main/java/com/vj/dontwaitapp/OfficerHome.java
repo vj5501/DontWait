@@ -3,7 +3,9 @@ package com.vj.dontwaitapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -11,8 +13,6 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.Timestamp;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -39,27 +39,31 @@ public class OfficerHome extends AppCompatActivity {
     }
 
     public void addEntry(View view) {
-        String busno= etBusno.getText().toString();
+
+        Editable busno= etBusno.getText();
         String source= etSource.getText().toString();
         String destination= etDesti.getText().toString();
         String time= (Timestamp.now().toDate().toString());
 
         Map<String,Object > route = new HashMap<>();
-        route.put ( " Bus no. " , busno ) ;
-        route.put ( " Source " , source ) ;
-        route.put ( " Destination " , destination ) ;
-        route.put ( " Leaving Time " , time) ;
-
+        route.put("BusNo",busno);
+        route.put("Source",source);
+        route.put("Destination",destination);
+        route.put("LeavingTime",time);
         firestore.collection("Routes").add(route).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
             public void onSuccess(DocumentReference documentReference) {
                 Toast.makeText(OfficerHome.this, "Successfully Added Route to Database", Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(OfficerHome.this,OfficerHome.class);
+                startActivity(intent);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
                 Toast.makeText(OfficerHome.this, "Error:Cannot Route to Database", Toast.LENGTH_SHORT).show();
+
             }
         });
+
     }
 }
