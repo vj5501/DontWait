@@ -27,4 +27,20 @@ Timer timer;
 
 
     }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        setContentView(R.layout.activity_main);
+
+        timer= new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                Intent office = new Intent(MainActivity.this, SelectRoll.class);
+                startActivity(office);
+            }
+        }, 2000);
+
+    }
 }
