@@ -35,7 +35,7 @@ public class TravellerHome extends AppCompatActivity {
 
         progressDialog=new ProgressDialog(this);
         progressDialog.setCancelable(false);
-        progressDialog.setMessage("Fwtching" );
+        progressDialog.setMessage("Fetching" );
         progressDialog.show();
 
         recyclerView=findViewById(R.id.recyclerView);
